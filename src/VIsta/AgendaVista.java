@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package VIsta;
+import javax.swing.JButton;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -17,6 +19,40 @@ public class AgendaVista extends javax.swing.JFrame {
      */
     public AgendaVista() {
         initComponents();
+    }
+    
+    public JButton getBtnGuardar() {
+        return Guardar;
+    }
+
+    public JButton getBtnBuscar() {
+        return Buscar;
+    }
+
+    public String getNombre() {
+        return Nombre.getText();
+    }
+
+    public String getTelefono() {
+        return Telefono.getText();
+    }
+
+    public String getNombreBuscar() {
+        return BuscarN.getText();
+    }
+
+    public void limpiarFormulario() {
+        Nombre.setText("");
+        Telefono.setText("");
+        Nombre.requestFocus();
+    }
+
+    public void mostrarResultado(String texto) {
+        Resultado.setText(texto);
+    }
+
+    public void mostrarMensaje(String mensaje) {
+        JOptionPane.showMessageDialog(this, mensaje);
     }
     
     /**
